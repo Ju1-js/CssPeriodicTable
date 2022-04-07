@@ -6,10 +6,73 @@
     <title>Periodic Table of Elements - HTML/CSS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="src/style.css">
-
+    <link rel="stylesheet" href="src/styles.css">
 </head>
 
 <body>
+    <div class="search">
+        <div class="search-wrapper">
+            <label class="header-search" for="search">Search Elements</label>
+            <input type="search" id="search" data-search>
+            <select name="filter" id="search-filter" data-search-filter>
+                <option value="name" title="Name">Name</option>
+                <option value="symbol" title="Symbol">Symbol</option>
+                <option value="appearance" title="Appearance">Appearance</option>
+                <option value="category" title="Category">Category</option>
+                <option value="phase" title="Phase">Phase</option>
+                <option value="density" title="Density">Density</option>
+                <option value="atomic_mass" title="Atomic Mass">Atomic Mass</option>
+                <option value="boil" title="Boiling Point">Boiling Point</option>
+                <option value="melt" title="Melting Point">Melting Point</option>
+                <option value="molar_heat" title="Molar Heat">Molar Heat</option>
+                <option value="discovered_by" title="Discovered By">Discovered By</option>
+                <option value="named_by" title="Named By">Named By</option>
+                <option value="atomic_number" title="Atomic Number">Atomic Number</option>
+                <option value="summary" title="Summary">Summary</option>
+                <option value="period" title="Period">Period</option>
+                <option value="xpos" title="Xpos">Xpos</option>
+                <option value="ypos" title="Ypos">Ypos</option>
+                <option value="electron_configuration" title="Electron Configuration">Electron Configuration</option>
+                <option value="electron_configuration_semantic" title="Electron Configuration Semantic">Electron Configuration Semantic</option>
+                <option value="electron_affinity" title="Electron Affinity">Electron Affinity</option>
+                <option value="electronegativity_pauling" title="Electronegativity Pauling">Electronegativity Pauling</option>
+                <option value="ionization_energies" title="Ionization Energies">Ionization Energies</option>
+                <option value="cpkhex" title="cpk-hex">cpk-hex</option>
+              </select>
+        </div>
+        <div class="pureElement-cards" data-pureElement-cards-container></div>
+        <template data-pureElement-template>
+            <div class="card">
+              <div class="name" data-name></div>
+              <div class="body">
+                <div class="name hide" data-name></div>
+                <div class="symbol hide" data-symbol></div>
+                <div class="appearance hide" data-appearance></div>
+                <div class="category hide" data-category></div>
+                <div class="phase hide" data-phase></div>
+                <div class="density hide" data-density></div>
+                <div class="atomic_mass hide" data-atomic_mass></div>
+                <div class="boil hide" data-boil></div>
+                <div class="melt hide" data-melt></div>
+                <div class="molar_heat hide" data-molar_heat></div>
+                <div class="discovered_by hide" data-discovered_by></div>
+                <div class="named_by hide" data-named_by></div>
+                <div class="atomic_number hide" data-atomic_number></div>
+                <div class="summary hide" data-summary></div>
+                <div class="period hide" data-period></div>
+                <div class="xpos hide" data-xpos></div>
+                <div class="ypos hide" data-ypos></div>
+                <div class="electron_configuration hide" data-electron_configuration></div>
+                <div class="electron_configuration_semantic hide" data-electron_configuration_semantic></div>
+                <div class="electron_affinity hide" data-electron_affinity></div>
+                <div class="electronegativity_pauling hide" data-electronegativity_pauling></div>
+                <div class="ionization_energies hide" data-ionization_energies></div>
+                <div class="cpkhex hide" data-cpkhex></div>
+              </div>
+            </div>
+          </template>
+    </div>
+
     <!-- partial:index.partial.html -->
     <!-- ELEMENT MIXIN TEMPLATE-->
     <!-- PLACEHOLDER MIXIN TEMPLATE-->
@@ -18,7 +81,7 @@
         <input class="category-cancel" type="radio" id="cancel" name="categories" />
         <input class="category-toggle" type="radio" id="alkaline-earth-metals" name="categories" />
         <input class="category-cancel" type="radio" id="cancel" name="categories" />
-        <input class="category-toggle" type="radio" id="lanthanoids" name="categories" />
+        <input class="category-toggle" type="radio" id="lanthanides" name="categories" />
         <input class="category-cancel" type="radio" id="cancel" name="categories" />
         <input class="category-toggle" type="radio" id="actinoids" name="categories" />
         <input class="category-cancel" type="radio" id="cancel" name="categories" />
@@ -3225,7 +3288,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c4 r9">
+            <div class="element lanthanide c4 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -3317,7 +3380,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c5 r9">
+            <div class="element lanthanide c5 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -3410,7 +3473,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c6 r9">
+            <div class="element lanthanide c6 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -3504,7 +3567,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c7 r9">
+            <div class="element lanthanide c7 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -3599,7 +3662,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c8 r9">
+            <div class="element lanthanide c8 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -3695,7 +3758,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c9 r9">
+            <div class="element lanthanide c9 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -3792,7 +3855,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c10 r9">
+            <div class="element lanthanide c10 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -3890,7 +3953,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c11 r9">
+            <div class="element lanthanide c11 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -3989,7 +4052,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c12 r9">
+            <div class="element lanthanide c12 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -4089,7 +4152,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c13 r9">
+            <div class="element lanthanide c13 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -4190,7 +4253,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c14 r9">
+            <div class="element lanthanide c14 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -4292,7 +4355,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c15 r9">
+            <div class="element lanthanide c15 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -4395,7 +4458,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c16 r9">
+            <div class="element lanthanide c16 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -4499,7 +4562,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c17 r9">
+            <div class="element lanthanide c17 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -4604,7 +4667,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="element lanthanoid c18 r9">
+            <div class="element lanthanide c18 r9">
                 <input class="activate" type="radio" name="elements" />
                 <input class="deactivate" type="radio" name="elements" />
                 <div class="overlay"></div>
@@ -10916,7 +10979,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="placeholder lanthanoid c3 r6">
+            <div class="placeholder lanthanide c3 r6">
                 <div class="square">57-71</div>
             </div>
             <div class="placeholder actinoid c3 r7">
@@ -10927,7 +10990,7 @@
                 <div class="row">
                     <label class="alkali-metal" for="alkali-metals">Alkali Metals</label>
                     <label class="alkaline-earth-metal" for="alkaline-earth-metals">Alkaline Earth Metals</label>
-                    <label class="lanthanoid" for="lanthanoids">Lanthanoids</label>
+                    <label class="lanthanide" for="lanthanides">Lanthanoids</label>
                     <label class="actinoid" for="actinoids">Aktinoids</label>
                     <label class="transition-metal" for="transition-metals">Transition Metals</label>
                     <label class="post-transition-metal" for="post-transition-metals">Post-Transition Metals</label>

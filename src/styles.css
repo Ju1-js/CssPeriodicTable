@@ -1,0 +1,54 @@
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+input {
+    font-size: 1rem;
+}
+
+.pureElement-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .25rem;
+    margin-top: 1rem;
+}
+
+.card {
+    /*border: 1px solid white;*/
+    background-color: #101318;
+    padding: .5rem;
+}
+
+.card>.header {
+    margin-bottom: .25rem;
+}
+
+.card>.body {
+    font-size: .8rem;
+    color: #777;
+}
+
+.hide {
+    display: none;
+}
+
+.header-search {
+    color: white;
+    font-size: 2rem;
+}
+
+.search {
+    margin: 1rem;
+}
+
+
+/* Overflow Text */
+
+.card>.body>* {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
