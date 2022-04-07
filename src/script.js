@@ -105,7 +105,7 @@ function searchPureElements(_value) {
 }
 
 function showRightData() {
-
+    // Show only the applicable data ex. Searching name -> show name, searching density -> show density 
 }
 
 // https://jsonplaceholder.typicode.com/users
