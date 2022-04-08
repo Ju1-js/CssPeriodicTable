@@ -39,8 +39,9 @@ input {
     margin: 1rem;
 }
 
-
-/* Overflow Text */
+html {
+    scroll-behavior: smooth;
+}
 
 .card>.card-info-wrapper>.body>* {
     overflow: hidden;
