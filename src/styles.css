@@ -16,16 +16,12 @@ input {
 }
 
 .card {
-    /*border: 1px solid white;*/
-    background-color: #101318;
+    border: 2.5px solid;
+    border-radius: 5px;
     padding: .5rem;
 }
 
-.card>.header {
-    margin-bottom: .25rem;
-}
-
-.card>.body {
+.card>.card-info-wrapper>.body>* {
     font-size: .8rem;
     color: #777;
 }
@@ -46,7 +42,7 @@ input {
 
 /* Overflow Text */
 
-.card>.body>* {
+.card>.card-info-wrapper>.body>* {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

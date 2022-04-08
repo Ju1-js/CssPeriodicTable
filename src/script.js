@@ -106,8 +106,8 @@ function searchPureElements(_value) {
 
 function showRightData(_filter, _pureElement) {
     // Show only the applicable data ex. Searching name -> show name, searching density -> show density 
-    for (let i = 0; i < _pureElement.element.children[1].children.length; i++) {
-        const child = (_pureElement.element.children[1].children[i])
+    for (let i = 0; i < _pureElement.element.children[0].children[1].children.length; i++) {
+        const child = (_pureElement.element.children[0].children[1].children[i])
             //console.log(_filter)
         if (child.classList.contains(_filter) && child.classList.contains("hide")) {
             child.classList.remove("hide")
