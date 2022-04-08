@@ -1,5 +1,10 @@
 // ¯\_(ツ)_/¯
 
+/* TODO:
+ * - Use flexbox to attach element card to search card and make it clickable
+ * - Use data to automatically create the table and add more info when you click on it
+ * - Done: Add a search bar
+ */
 // Scroll to function
 function scrollToDiv(element, align) {
     element = element.replace("#", "")
