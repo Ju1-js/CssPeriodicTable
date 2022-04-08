@@ -5,7 +5,8 @@
  * - Use data to automatically create the table and add more info when you click on it
  * - Done: Add a search bar
  */
-// Scroll to function
+
+// Scroll to div
 function scrollToDiv(element, align) {
     element = element.replace("#", "")
     const el = document.getElementById(element)
