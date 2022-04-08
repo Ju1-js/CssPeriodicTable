@@ -1,5 +1,22 @@
 // ¯\_(ツ)_/¯
 
+// Scroll to function
+function scrollToDiv(element, align) {
+    element = element.replace("#", "")
+    const el = document.getElementById(element)
+    let _align
+    switch (align) {
+        case (align === "top" || align == true):
+            _align = true;
+            break;
+        case (align === "bottom" || align == false):
+            _align = false;
+            break;
+    }
+    el.scrollIntoView(align);
+}
+
+// Search manager
 const pureElementCardTemplate = document.querySelector("[data-pureElement-template]")
 const pureElementCardContainer = document.querySelector("[data-pureElement-cards-container]")
 const searchInput = document.querySelector("[data-search]")
