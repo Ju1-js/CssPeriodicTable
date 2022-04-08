@@ -84,28 +84,37 @@ function getFilter(_pureElement, _value) {
             _isVisible = _pureElement.electron_affinity.toString().toLowerCase().replace(/\s+/g, ' ').trim().includes(_value)
             break
         case "electronegativity_pauling":
-            _isVisible = _pureElement.electronegativity_pauling.toString().toLowerCase().includes(_value)
+            _isVisible = _pureElement.electronegativity_pauling.toString().replace(/\s+/g, ' ').trim().toLowerCase().includes(_value)
             break
         case "ionization_energies":
-            _isVisible = _pureElement.ionization_energies.toString().toLowerCase().includes(_value)
+            _isVisible = _pureElement.ionization_energies.toString().replace(/\s+/g, ' ').trim().toLowerCase().includes(_value)
             break
         case "cpkhex":
-            _isVisible = _pureElement.cpkhex.toString().toLowerCase().includes(_value)
+            _isVisible = _pureElement.cpkhex.toString().replace(/\s+/g, ' ').trim().toLowerCase().includes(_value)
             break
     }
+    showRightData(filter, _pureElement)
     return _isVisible
 }
 
 function searchPureElements(_value) {
     pureElements.forEach(_pureElement => {
         const isVisible = getFilter(_pureElement, _value)
-        showRightData()
         _pureElement.element.classList.toggle("hide", !isVisible)
     })
 }
 
-function showRightData() {
+function showRightData(_filter, _pureElement) {
     // Show only the applicable data ex. Searching name -> show name, searching density -> show density 
+    for (let i = 0; i < _pureElement.element.children[1].children.length; i++) {
+        const child = (_pureElement.element.children[1].children[i])
+            //console.log(_filter)
+        if (child.classList.contains(_filter) && child.classList.contains("hide")) {
+            child.classList.remove("hide")
+        } else if (!child.classList.contains(_filter) && !child.classList.contains("hide")) {
+            child.classList.add("hide")
+        }
+    }
 }
 
 // https://jsonplaceholder.typicode.com/users
@@ -115,6 +124,7 @@ fetch("src/elements.json")
         pureElements = data.map(_pureElement => {
             const card = pureElementCardTemplate.content.cloneNode(true).children[0]
             const name = card.querySelector("[data-name]")
+            const name2 = card.querySelector("[data-name2]")
             const symbol = card.querySelector("[data-symbol]")
             const appearance = card.querySelector("[data-appearance]")
             const category = card.querySelector("[data-category]")
@@ -241,6 +251,8 @@ fetch("src/elements.json")
 
             name.textContent = _pureElement.name
             name.title = _pureElement.name
+            name2.textContent = _pureElement.name
+            name2.title = _pureElement.name
             symbol.textContent = _pureElement.symbol
             symbol.title = _pureElement.symbol
             appearance.textContent = _pureElement.appearance
