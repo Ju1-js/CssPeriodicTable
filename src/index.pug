@@ -8,37 +8,43 @@ button.collapsible Element Search
   .panel
     .search-wrapper
       label.header-search(for="search") Search Elements:
-      input#search(type="search", data-search="")
-      select#search-filter(name="filter", data-search-filter="")
-        option(value="name", title="Name") Name
-        option(value="symbol", title="Symbol") Symbol
-        option(value="appearance", title="Appearance") Appearance
-        option(value="category", title="Category") Category
-        option(value="phase", title="Phase") Phase
-        option(value="density", title="Density") Density
-        option(value="atomic_mass", title="Atomic Mass") Atomic Mass
-        option(value="boil", title="Boiling Point") Boiling Point
-        option(value="melt", title="Melting Point") Melting Point
-        option(value="molar_heat", title="Molar Heat") Molar Heat
-        option(value="discovered_by", title="Discovered By") Discovered By
-        option(value="named_by", title="Named By") Named By
-        option(value="atomic_number", title="Atomic Number") Atomic Number
-        option(value="summary", title="Summary") Summary
-        option(value="period", title="Period") Period
-        option(value="xpos", title="Xpos") Xpos
-        option(value="ypos", title="Ypos") Ypos
-        option(value="electron_configuration", title="Electron Configuration") Electron Configuration
-        option(
-          value="electron_configuration_semantic",
-          title="Electron Configuration Semantic"
-        ) Electron Configuration Semantic
-        option(value="electron_affinity", title="Electron Affinity") Electron Affinity
-        option(
-          value="electronegativity_pauling",
-          title="Electronegativity Pauling"
-        ) Electronegativity Pauling
-        option(value="ionization_energies", title="Ionization Energies") Ionization Energies
-        option(value="cpkhex", title="cpk-hex") cpk-hex
+      .float-container
+        .float-child.child-left
+          input#search(type="search", data-search="")
+        .float-child.child-right
+          select#search-filter(name="filter", data-search-filter="")
+            option(value="name", title="Name") Name
+            option(value="symbol", title="Symbol") Symbol
+            option(value="appearance", title="Appearance") Appearance
+            option(value="category", title="Category") Category
+            option(value="phase", title="Phase") Phase
+            option(value="density", title="Density") Density
+            option(value="atomic_mass", title="Atomic Mass") Atomic Mass
+            option(value="boil", title="Boiling Point") Boiling Point
+            option(value="melt", title="Melting Point") Melting Point
+            option(value="molar_heat", title="Molar Heat") Molar Heat
+            option(value="discovered_by", title="Discovered By") Discovered By
+            option(value="named_by", title="Named By") Named By
+            option(value="atomic_number", title="Atomic Number") Atomic Number
+            option(value="summary", title="Summary") Summary
+            option(value="period", title="Period") Period
+            option(value="xpos", title="Xpos") Xpos
+            option(value="ypos", title="Ypos") Ypos
+            option(
+              value="electron_configuration",
+              title="Electron Configuration"
+            ) Electron Configuration
+            option(
+              value="electron_configuration_semantic",
+              title="Electron Configuration Semantic"
+            ) Electron Configuration Semantic
+            option(value="electron_affinity", title="Electron Affinity") Electron Affinity
+            option(
+              value="electronegativity_pauling",
+              title="Electronegativity Pauling"
+            ) Electronegativity Pauling
+            option(value="ionization_energies", title="Ionization Energies") Ionization Energies
+            option(value="cpkhex", title="cpk-hex") cpk-hex
     .pureElement-cards(data-pureelement-cards-container="")
     template(data-pureelement-template="")
       .card

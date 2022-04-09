@@ -15,32 +15,38 @@
   <div class="panel">
     <div class="search-wrapper">
       <label class="header-search" for="search">Search Elements:</label>
-      <input id="search" type="search" data-search=""/>
-      <select id="search-filter" name="filter" data-search-filter="">
-        <option value="name" title="Name">Name</option>
-        <option value="symbol" title="Symbol">Symbol</option>
-        <option value="appearance" title="Appearance">Appearance</option>
-        <option value="category" title="Category">Category</option>
-        <option value="phase" title="Phase">Phase</option>
-        <option value="density" title="Density">Density</option>
-        <option value="atomic_mass" title="Atomic Mass">Atomic Mass</option>
-        <option value="boil" title="Boiling Point">Boiling Point</option>
-        <option value="melt" title="Melting Point">Melting Point</option>
-        <option value="molar_heat" title="Molar Heat">Molar Heat</option>
-        <option value="discovered_by" title="Discovered By">Discovered By</option>
-        <option value="named_by" title="Named By">Named By</option>
-        <option value="atomic_number" title="Atomic Number">Atomic Number</option>
-        <option value="summary" title="Summary">Summary</option>
-        <option value="period" title="Period">Period</option>
-        <option value="xpos" title="Xpos">Xpos</option>
-        <option value="ypos" title="Ypos">Ypos</option>
-        <option value="electron_configuration" title="Electron Configuration">Electron Configuration</option>
-        <option value="electron_configuration_semantic" title="Electron Configuration Semantic">Electron Configuration Semantic</option>
-        <option value="electron_affinity" title="Electron Affinity">Electron Affinity</option>
-        <option value="electronegativity_pauling" title="Electronegativity Pauling">Electronegativity Pauling</option>
-        <option value="ionization_energies" title="Ionization Energies">Ionization Energies</option>
-        <option value="cpkhex" title="cpk-hex">cpk-hex</option>
-      </select>
+      <div class="float-container">
+        <div class="float-child child-left">
+          <input id="search" type="search" data-search=""/>
+        </div>
+        <div class="float-child child-right">
+          <select id="search-filter" name="filter" data-search-filter="">
+            <option value="name" title="Name">Name</option>
+            <option value="symbol" title="Symbol">Symbol</option>
+            <option value="appearance" title="Appearance">Appearance</option>
+            <option value="category" title="Category">Category</option>
+            <option value="phase" title="Phase">Phase</option>
+            <option value="density" title="Density">Density</option>
+            <option value="atomic_mass" title="Atomic Mass">Atomic Mass</option>
+            <option value="boil" title="Boiling Point">Boiling Point</option>
+            <option value="melt" title="Melting Point">Melting Point</option>
+            <option value="molar_heat" title="Molar Heat">Molar Heat</option>
+            <option value="discovered_by" title="Discovered By">Discovered By</option>
+            <option value="named_by" title="Named By">Named By</option>
+            <option value="atomic_number" title="Atomic Number">Atomic Number</option>
+            <option value="summary" title="Summary">Summary</option>
+            <option value="period" title="Period">Period</option>
+            <option value="xpos" title="Xpos">Xpos</option>
+            <option value="ypos" title="Ypos">Ypos</option>
+            <option value="electron_configuration" title="Electron Configuration">Electron Configuration</option>
+            <option value="electron_configuration_semantic" title="Electron Configuration Semantic">Electron Configuration Semantic</option>
+            <option value="electron_affinity" title="Electron Affinity">Electron Affinity</option>
+            <option value="electronegativity_pauling" title="Electronegativity Pauling">Electronegativity Pauling</option>
+            <option value="ionization_energies" title="Ionization Energies">Ionization Energies</option>
+            <option value="cpkhex" title="cpk-hex">cpk-hex</option>
+          </select>
+        </div>
+      </div>
     </div>
     <div class="pureElement-cards" data-pureelement-cards-container=""></div>
     <template data-pureelement-template="">
