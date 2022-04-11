@@ -34,6 +34,11 @@ let pureElements = [];
 
 let lastSearchInput = "";
 
+function jsonFix(_data) {
+  _data = _data.elements;
+  return _data;
+}
+
 // https://jsonplaceholder.typicode.com/users
 // src/elements.json
 fetch(
@@ -41,8 +46,14 @@ fetch(
 )
   .then((res) => res.json())
   .then((data) => {
-    data = data.elements;
+    data = jsonFix(data);
     pureElements = data.map((_pureElement) => {
+      
+      console.log(_pureElement["cpk-hex"]);
+      _pureElement.cpkhex = _pureElement["cpk-hex"]
+      delete _pureElement["cpk-hex"]
+      console.log(_pureElement.cpkhex);
+      
       const card = pureElementCardTemplate.content.cloneNode(true).children[0];
       const name = card.querySelector("[data-name]");
       const name2 = card.querySelector("[data-name2]");
