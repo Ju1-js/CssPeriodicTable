@@ -48,11 +48,8 @@ fetch(
   .then((data) => {
     data = jsonFix(data);
     pureElements = data.map((_pureElement) => {
-      
-      console.log(_pureElement["cpk-hex"]);
       _pureElement.cpkhex = _pureElement["cpk-hex"]
       delete _pureElement["cpk-hex"]
-      console.log(_pureElement.cpkhex);
       
       const card = pureElementCardTemplate.content.cloneNode(true).children[0];
       const name = card.querySelector("[data-name]");
